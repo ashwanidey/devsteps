@@ -1,38 +1,15 @@
 'use client'
-
-import Image from "next/image"
 import { initFlowbite } from "flowbite"
 import { useEffect } from "react"
 import DarkModeButton from "./DarkModeButton"
 
 import {
-  Cloud,
-  CreditCard,
-  Github,
-  Keyboard,
-  LifeBuoy,
   LogOut,
-  Mail,
-  MessageSquare,
-  Plus,
-  PlusCircle,
-  Settings,
-  User,
-  UserPlus,
-  Users,
 } from "lucide-react"
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuGroup,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 

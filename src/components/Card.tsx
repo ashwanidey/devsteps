@@ -2,16 +2,16 @@
 import React from "react";
 import { BackgroundGradient } from "@components/ui/background-gradient";
 
-import Image from "next/image";
+
 
 export default function Card({tags,heading,description} : {tags : string[],heading : string,description : string}) {
   return (
     <div className="h-full">
       <BackgroundGradient className="rounded-[22px]  p-4  sm:p-10 bg-white dark:bg-zinc-900 h-full">
       <div className="flex gap-4">
-        {tags.map((tag : string) => {
+        {tags.map((tag : string,index) => {
           return (
-          <button className="rounded-full px-4  py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800">
+          <button className="rounded-full px-4  py-1 text-white flex items-center space-x-1 bg-black mt-4 text-xs font-bold dark:bg-zinc-800" key={index}>
           <span>{tag}</span>
           
         </button>
