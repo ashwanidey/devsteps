@@ -5,12 +5,19 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "format": "prettier --write \"src/**/*.{js,jsx}\""
   },
   "dependencies": {
+    "@codesandbox/sandpack-react": "^2.19.8",
+    "@minoru/react-dnd-treeview": "^3.4.4",
+    "@monaco-editor/react": "^4.6.0",
+    "@radix-ui/react-alert-dialog": "^1.1.1",
+    "@radix-ui/react-checkbox": "^1.1.1",
     "@radix-ui/react-dropdown-menu": "^2.1.1",
     "@radix-ui/react-navigation-menu": "^1.2.0",
     "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-tabs": "^1.1.0",
     "@react-three/fiber": "^8.17.7",
     "@tsparticles/engine": "^3.5.0",
     "@tsparticles/react": "^3.0.0",
@@ -22,10 +29,13 @@
     "flowbite": "^2.5.1",
     "framer-motion": "^11.5.4",
     "lucide-react": "^0.441.0",
+    "markdown-to-jsx": "^7.5.0",
     "next": "14.2.11",
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-markdown": "^9.0.1",
+    "react-resizable-panels": "^0.0.63",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
     "three": "^0.168.0"
@@ -36,6 +46,7 @@
     "@types/react-dom": "^18",
     "@types/three": "^0.168.0",
     "postcss": "^8",
+    "prettier": "^3.3.3",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

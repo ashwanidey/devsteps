@@ -12,17 +12,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       
-      <body className="overflow-x-hidden w-full">
+      <body className="overflow-x-hidden w-full ">
       <ThemeProvider
             attribute="class"
             defaultTheme="dark"
             disableTransitionOnChange
           >
-        <NavBar />
-        <div>
+       
+        
           {children}
-        </div>
-        <Footer/>
+        
+        
         </ThemeProvider>
       </body>
     </html>

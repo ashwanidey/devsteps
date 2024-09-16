@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from "react"
-import DarkModeButton from "./DarkModeButton"
+import DarkModeButton from "@components/DarkModeButton"
 
 import {
   LogOut,
@@ -14,13 +14,13 @@ import {
 } from "@/components/ui/dropdown-menu"
 import Link from "next/link"
 
-const NavBar = () => {
+const ProjectNavBar = () => {
 
   
   return (
     <>
   
-<nav className="fixed w-full z-50 top-0 start-0 bg-clip-padding  backdrop-blur-lg bg-opacity-80
+<nav className=" w-full z-50 top-0 start-0 bg-clip-padding  backdrop-blur-lg bg-opacity-80
 ">
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-3">
   <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -100,4 +100,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default ProjectNavBar

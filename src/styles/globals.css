@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+
+  margin: 0;
+
+  height: 100%;
+
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -59,6 +67,8 @@
   }
 }
 
+
+
 @layer base {
   * {
     @apply border-border;
@@ -68,5 +78,8 @@
   }
   .top-margin {
     @apply absolute top-20;
+  }
+  code { 
+    @apply bg-zinc-800 text-white px-1 rounded;
   }
 }
