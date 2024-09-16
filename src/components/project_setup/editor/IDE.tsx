@@ -30,13 +30,13 @@ export default function IDE() {
       direction='horizontal'
       className=' h-full'
     >
-      <Panel  className="" >
+      <Panel minSizePercentage={5} className="" >
         <div className="h-full border-l-2 ">
         <Instructions/>
         </div>
       </Panel>
       <PanelResizeHandle className='flex w-px items-center justify-center '>
-        <div className='z-10 flex h-full w-[20px] items-center justify-center rounded-sm border '>
+        <div className='z-10 flex h-full w-[10px] items-center justify-center rounded-sm border '>
         <DragHandleDots2Icon className='h-5 w-5' />
         </div>
       </PanelResizeHandle>
@@ -51,12 +51,12 @@ export default function IDE() {
       </Panel>
 
       <PanelResizeHandle className='flex w-px items-center justify-center '>
-        <div className='z-10 flex h-full w-[20px] items-center justify-center rounded-sm border '>
+        <div className='z-10 flex h-full w-[10px] items-center justify-center rounded-sm border '>
         <DragHandleDots2Icon className='h-5 w-5' />
         </div>
       </PanelResizeHandle>
 
-      <Panel >
+      <Panel minSizePercentage={5}>
         <div className="h-full">
           <PreviewBar setTogglePreview={setTogglePreview} togglePreview = {togglePreview}/>
           <div className="p-4 h-[95%] bg-background">
