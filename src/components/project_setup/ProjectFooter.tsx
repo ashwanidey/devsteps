@@ -2,7 +2,9 @@
 
 const ProjectFooter = () => {
   return (
-    <div className="h-[4rem]">ProjectFooter</div>
+    <div className="md:h-[4rem]  hidden md:block">
+
+    </div>
   )
 }
 

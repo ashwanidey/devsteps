@@ -13,6 +13,7 @@ import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
 import { useState } from "react";
 import PreviewBar from "./PreviewBar";
 import Instructions from "@components/project_setup/Instructions";
+import { DragHandleDots2Icon } from '@radix-ui/react-icons'
 
 
 
@@ -23,23 +24,24 @@ export default function IDE() {
     <>
    
       <SandpackProvider template="react" theme="dark"  >
-        <SandpackLayout className="h-[calc(100vh-9rem)] "> 
+        <SandpackLayout className="md:h-[calc(100vh-9rem)] h-[calc(100vh-5rem)] "> 
           <PanelGroup
       autoSaveId='example'
       direction='horizontal'
       className=' h-full'
     >
-      <Panel minSizePercentage= {10} className="" >
+      <Panel  className="" >
         <div className="h-full border-l-2 ">
         <Instructions/>
         </div>
       </Panel>
       <PanelResizeHandle className='flex w-px items-center justify-center '>
-        <div className='z-10 flex h-full w-[30px] items-center justify-center rounded-sm border '>
+        <div className='z-10 flex h-full w-[20px] items-center justify-center rounded-sm border '>
+        <DragHandleDots2Icon className='h-5 w-5' />
         </div>
       </PanelResizeHandle>
         
-      <Panel minSizePercentage= {10} >
+      <Panel  >
         <div className="h-full flex w-full">
       {showExplorer && <SandpackFileExplorer />  }
         <div className="h-full border-l-2 w-full">
@@ -49,11 +51,12 @@ export default function IDE() {
       </Panel>
 
       <PanelResizeHandle className='flex w-px items-center justify-center '>
-        <div className='z-10 flex h-full w-[30px] items-center justify-center rounded-sm border '>
+        <div className='z-10 flex h-full w-[20px] items-center justify-center rounded-sm border '>
+        <DragHandleDots2Icon className='h-5 w-5' />
         </div>
       </PanelResizeHandle>
 
-      <Panel minSizePercentage= {10} >
+      <Panel >
         <div className="h-full">
           <PreviewBar setTogglePreview={setTogglePreview} togglePreview = {togglePreview}/>
           <div className="p-4 h-[95%] bg-background">

@@ -61,7 +61,7 @@ const NavBar = () => {
     <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse md:hidden gap-2">
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-      <button  type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+      <div   className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
         <span className="sr-only">Open main menu</span>
         <div>
         {/* <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -69,7 +69,7 @@ const NavBar = () => {
         </svg> */}
         Menu
         </div>
-    </button>
+    </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
       <DropdownMenuItem>
