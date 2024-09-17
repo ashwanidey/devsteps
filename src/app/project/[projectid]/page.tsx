@@ -4,7 +4,7 @@ import ProjectNavBar from '@components/project_setup/ProjectNavBar'
 import Instructions from '@components/project_setup/Instructions'
 import ProjectFooter from '@components/project_setup/ProjectFooter'
 
-import MobileView from '@components/project_setup/MobileView'
+
 
 import { react_project_data } from '@data/react_project_data'
 
