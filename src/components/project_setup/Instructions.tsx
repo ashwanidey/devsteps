@@ -17,7 +17,7 @@ const Instructions = () => {
      
     <div className='dark:bg-background h-full overflow-y-auto '>
     
-      <h1 className='text-2xl font-bold pl-6 p-3 sticky top-0  rounded-b-lg bg-zinc-900 '>Objectives</h1>
+      <h1 className='text-2xl font-bold pl-6 p-3 sticky top-0  rounded-b-lg bg-zinc-900 z-10'>Objectives</h1>
       
         
         
@@ -27,7 +27,7 @@ const Instructions = () => {
          
         
       </div>
-      <h1 className='text-2xl font-bold sticky top-0 bg-zinc-900 pl-6 p-3 rounded-b-lg'>Tasks</h1>
+      <h1 className='text-2xl font-bold sticky top-0 bg-zinc-900 pl-6 p-3 rounded-b-lg z-10'>Tasks</h1>
       <ul className='p-6'>
         {project.checkpoints.map((task, index) => {
           return <li key={index} className='p-2'>

@@ -13,7 +13,11 @@ import {
   SandpackCodeEditor,
   SandpackConsole,
   Sandpack,
+  
 } from "@codesandbox/sandpack-react";
+import ResetButton from "./ResetButton";
+import RunButton from "./RunButton";
+
 
 export default function MonacoEditor({setShowExplorer, showExplorer} : {
   setShowExplorer : React.Dispatch<React.SetStateAction<boolean>>,
@@ -126,10 +130,15 @@ export default function MonacoEditor({setShowExplorer, showExplorer} : {
             },
             
           }}
-          
-          
         />
+        
       </div>
+      <div className="p-2 bg-background flex gap-5">
+        {/* <ResetButton/> */}
+      <RunButton/>
+      </div>
+      
+      
     </SandpackStack>
   );
 }

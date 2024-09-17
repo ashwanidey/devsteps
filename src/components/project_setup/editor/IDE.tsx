@@ -4,6 +4,7 @@ import {
   SandpackPreview,
   SandpackLayout,
   SandpackConsole,
+ 
 } from "@codesandbox/sandpack-react";
 import MonacoEditor from "./MonacoEditor";
 import './preview.css';
@@ -17,13 +18,16 @@ import { DragHandleDots2Icon } from '@radix-ui/react-icons'
 
 
 
-export default function IDE() {
+export default function IDE({files} : {files : any}) {
   const [showExplorer, setShowExplorer] = useState(false);
   const [togglePreview, setTogglePreview] = useState(true);
   return (
     <>
    
-      <SandpackProvider template="react" theme="dark"  >
+      <SandpackProvider template="react" theme="dark" files={files} options={{
+    recompileMode: "delayed",
+    recompileDelay: 1000,
+  }}>
         <SandpackLayout className="md:h-[calc(100vh-9rem)] h-[calc(100vh-5rem)] "> 
           <PanelGroup
       autoSaveId='example'
@@ -58,13 +62,15 @@ export default function IDE() {
 
       <Panel minSizePercentage={5}>
         <div className="h-full">
-          <PreviewBar setTogglePreview={setTogglePreview} togglePreview = {togglePreview}/>
-          <div className="p-4 h-[95%] bg-background">
+          {/* <PreviewBar setTogglePreview={setTogglePreview} togglePreview = {togglePreview}/> */}
+          <div className="p-4 h-full bg-background">
              <SandpackPreview
                 showOpenInCodeSandbox={false}
                 className= {`${!togglePreview && 'hidden'} h-full`}
-              /> <SandpackConsole style={{borderRadius : "6px"
-                }}  className= {`${togglePreview && 'hidden'}`}   maxMessageCount = {100} showHeader={false}/>
+              /> 
+              {/* <SandpackConsole style={{borderRadius : "6px"
+                }}  className= {`${togglePreview && 'hidden'}`}   maxMessageCount = {100} showHeader={false}/> */}
+             
               </div>
               </div>
       </Panel>
