@@ -1,7 +1,6 @@
 import Project from "@models/projects"
 import dbconnect from "@lib/dbconnect";
 import { NextResponse,NextRequest } from "next/server"
-import { getServerSession } from 'next-auth/next';
 import { User } from "next-auth";
 
 

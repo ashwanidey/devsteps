@@ -11,16 +11,47 @@ import './preview.css';
 
 import SandpackFileExplorer from "./FileExplorer/src";
 import { Panel, PanelGroup, PanelResizeHandle } from "react-resizable-panels";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PreviewBar from "./PreviewBar";
 import Instructions from "@components/project_setup/Instructions";
 import { DragHandleDots2Icon } from '@radix-ui/react-icons'
+import { useSession } from "next-auth/react";
+import axios from "axios";
 
 
 
-export default function IDE({project} : {project : any}) {
+export default function IDE({params} : {params : any}) {
   const [showExplorer, setShowExplorer] = useState(false);
   const [togglePreview, setTogglePreview] = useState(true);
+  const [project,setProject] = useState<any|null>(null);
+  const [loading,setLoading] = useState<boolean>(false);
+  const {data:session} = useSession();
+  
+
+  useEffect(() => {
+    async function fetchData() {
+      
+      try {
+        setLoading(true);
+        const options = {
+          url: "/api/data/get_project",
+          method: "post",
+          data: { // axios expects `data` instead of `params` for POST request
+            projectid: params.projectid,
+            userid: session?.user,
+          },
+        };
+        const response = await axios(options);
+        setProject(response.data.project);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    }
+
+  
+      fetchData();
+    
+  }, [loading]);
   return (
     <>
    

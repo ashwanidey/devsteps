@@ -120,7 +120,12 @@ const NavBar = () => {
               </DropdownMenuTrigger>
 
               <DropdownMenuContent align="end">
-                <DropdownMenuItem>Home</DropdownMenuItem>
+                <Link href="/">
+                <DropdownMenuItem>
+                  Home
+
+                </DropdownMenuItem>
+                </Link>
                 <DropdownMenuItem>Projects</DropdownMenuItem>
                 <DropdownMenuItem>Quizzes</DropdownMenuItem>
 

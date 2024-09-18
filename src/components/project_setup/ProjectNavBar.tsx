@@ -16,7 +16,7 @@ import Image from 'next/image';
 import { redirect } from 'next/navigation';
 import { useRouter } from 'next/navigation';
 
-const ProjectNavBar = async() => {
+const ProjectNavBar = () => {
   const { data: session } = useSession<any | null>();
   const [providers, setProviders] = useState<any | null>(null);
   const { setTheme, theme } = useTheme();
@@ -73,8 +73,10 @@ const ProjectNavBar = async() => {
               <>
                 <button className="p-[2px] relative" onClick={() => 
                   { 
-                    router.push('/')
+                    
                     signOut()
+                   
+                    
 
                   }}>
                   <div className="sign-button-outerdiv" />

@@ -5,43 +5,23 @@ import Instructions from '@components/project_setup/Instructions'
 import ProjectFooter from '@components/project_setup/ProjectFooter'
 import { useSession } from 'next-auth/react'
 import axios from 'axios'
-import { useEffect, useState } from 'react'
+import { useEffect, useLayoutEffect, useState } from 'react'
+import { redirect } from 'next/navigation'
 
 
 const page = ({ params } : { params: { projectid: string }}) => {
-  const [project,setProject] = useState<any|null>(null);
-  const {data:session} = useSession();
-  
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const options = {
-          url: "/api/data/get_project",
-          method: "post",
-          data: { // axios expects `data` instead of `params` for POST request
-            projectid: params.projectid,
-            userid: session?.user,
-          },
-        };
-        const response = await axios(options);
-        setProject(response.data.project);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    }
-
-    if (params.projectid && session?.user) {
-      fetchData();
-    }
-  }, [params.projectid, session?.user]);
+  const {data : session} = useSession();
+  useLayoutEffect(()=>{
+    if(!session?.user)
+      return redirect('/sign-in')
+  },[session])
 
   return (
     <>
     <ProjectNavBar/>
     <div className=''>
       {/* <MobileView/> */}
-    <IDE project = {project}/>
+    <IDE params = {params}/>
     </div>
     <ProjectFooter/>
     </>
