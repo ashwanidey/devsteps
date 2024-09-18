@@ -18,13 +18,13 @@ import { DragHandleDots2Icon } from '@radix-ui/react-icons'
 
 
 
-export default function IDE({files} : {files : any}) {
+export default function IDE({project} : {project : any}) {
   const [showExplorer, setShowExplorer] = useState(false);
   const [togglePreview, setTogglePreview] = useState(true);
   return (
     <>
    
-      <SandpackProvider template="react" theme="dark" files={files} options={{
+      <SandpackProvider template="react" theme="dark" files={project?.files} options={{
     recompileMode: "delayed",
     recompileDelay: 1000,
   }}>
@@ -36,7 +36,7 @@ export default function IDE({files} : {files : any}) {
     >
       <Panel minSizePercentage={5} className="" >
         <div className="h-full border-l-2 ">
-        <Instructions/>
+        <Instructions project = {project}/>
         </div>
       </Panel>
       <PanelResizeHandle className='flex w-px items-center justify-center '>

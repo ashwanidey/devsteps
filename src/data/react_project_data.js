@@ -1,8 +1,15 @@
+import mongoose from "mongoose";
+
 export const react_project_data = [
   // The name of the project
   {
-    id: "12345",
+    projectid: 101,
     name: "Authorization Form",
+    tags: ["React", "JSX"],
+    smalldescription: `A client just called you to say that they love their new website! There’s only one problem: they don’t like how their contact page displays their personal information for all to see.
+
+They’ve asked you to hide their website’s contact page behind a password form. In this project, you’ll accomplish this by creating a React component to set up a simple authorization layer.
+    `,
     description: `A client just called you to say that they love their new website! There’s only one problem: they don’t like how their contact page displays their personal information for all to see.
 
 They’ve asked you to hide their website’s contact page behind a password form. In this project, you’ll accomplish this by creating a React component to set up a simple authorization layer.`,

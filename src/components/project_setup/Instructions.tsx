@@ -5,13 +5,7 @@ import { BackgroundBeamsWithCollision } from "@/components/ui/background-beams-w
 import { BackgroundBeams } from "../ui/background-beams";
 
 
-
-
-
-const project = react_project_data[0]
-
-
-const Instructions = () => {
+const Instructions = ({project} : any) => {
   return (
     
      
@@ -22,14 +16,14 @@ const Instructions = () => {
         
         
         <div className='p-6 flex flex-col space-y-4'>
-        <div className='text-[2rem] font-[700] bg-gradient-to-r from-pink-500 to-violet-600 bg-clip-text text-transparent'>{project.name}</div>
-        <ReactMarkdown className='text-[1.2rem] font-[400] leading-7'>{project.description}</ReactMarkdown>
+        <div className='text-[2rem] font-[700] bg-gradient-to-r from-pink-500 to-violet-600 bg-clip-text text-transparent'>{project?.name}</div>
+        <ReactMarkdown className='text-[1.2rem] font-[400] leading-7'>{project?.smalldescription}</ReactMarkdown>
          
         
       </div>
       <h1 className='text-2xl font-bold sticky top-0 bg-zinc-900 pl-6 p-3 rounded-b-lg z-10'>Tasks</h1>
       <ul className='p-6'>
-        {project.checkpoints.map((task, index) => {
+        {project?.checkpoints.map((task:any, index:any) => {
           return <li key={index} className='p-2'>
             <div className="inline-flex items-center -ml-3">
   <label

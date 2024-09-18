@@ -2,10 +2,13 @@
 import React from "react";
 import { BackgroundGradient } from "@components/ui/background-gradient";
 import Link from "next/link";
+import ReactMarkdown from 'react-markdown'
 
 
 
-export default function Card({tags,heading,description} : {tags : string[],heading : string,description : string}) {
+export default function Card({tags,heading,description,projectId} : {tags : string[],heading : string,description : string,projectId:string}) {
+  
+
   return (
     <div className="h-full">
       <BackgroundGradient className="rounded-[22px]  p-4  sm:p-10 bg-white dark:bg-zinc-900 h-full">
@@ -24,12 +27,12 @@ export default function Card({tags,heading,description} : {tags : string[],headi
         {heading}
         </p>
 
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <ReactMarkdown className="text-sm text-neutral-600 dark:text-neutral-400 space-y-4">
        {description}
-        </p>
+        </ReactMarkdown>
         
         
-        <Link href = "/project/1234" className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 mt-4 mb-0">
+        <Link href = {`/project/${projectId}`} className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 mt-4 mb-0">
           Start Project
         </Link>
   
