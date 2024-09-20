@@ -1,3 +1,4 @@
+import { Description } from '@radix-ui/react-alert-dialog';
 import { Schema, model, models } from 'mongoose';
 
 
@@ -16,7 +17,9 @@ const ProjectSchema = new Schema({
     type : Array
   },
   smalldescription : String,
+  description : String,
   totalsteps : Number,
+  remainingsteps : Number,
   checkpoints : {
     type : Array,
   },
