@@ -11,10 +11,10 @@ import { redirect } from 'next/navigation'
 
 const page = ({ params } : { params: { projectid: string }}) => {
   const {data : session} = useSession();
-  useLayoutEffect(()=>{
-    if(!session?.user)
-      return redirect('/sign-in')
-  },[session])
+  // useLayoutEffect(()=>{
+  //   if(!session?.user)
+  //     return redirect('/sign-in')
+  // },[session])
 
   return (
     <>

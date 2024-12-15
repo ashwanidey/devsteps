@@ -55,12 +55,12 @@ const ProjectNavBar = () => {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="navbar-link">
+                <Link href="/project/102" className="navbar-link">
                   Project
                 </Link>
               </li>
               <li>
-                <Link href="#" className="navbar-link">
+                <Link href="/quiz" className="navbar-link">
                   Quiz
                 </Link>
               </li>
@@ -69,7 +69,7 @@ const ProjectNavBar = () => {
 
           {/* Desktop User/Provider Section */}
           <div className="md:flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse hidden gap-4">
-            {session?.user ? (
+            {/* {session?.user ? (
               <>
                 <button className="p-[2px] relative" onClick={() => 
                   { 
@@ -103,7 +103,7 @@ const ProjectNavBar = () => {
                   </div>
                 </button>
               ))
-            )}
+            )} */}
           </div>
 
           {/* Mobile User/Provider Section */}
@@ -124,9 +124,14 @@ const ProjectNavBar = () => {
               </DropdownMenuTrigger>
 
               <DropdownMenuContent align="end">
+                <Link href="/project/102">
+                  
                 <DropdownMenuItem>Projects</DropdownMenuItem>
+                </Link>
+                <Link href="/quiz">
                 <DropdownMenuItem>Quizzes</DropdownMenuItem>
-                {session?.user ? (
+                </Link>
+                {/* {session?.user ? (
                   <DropdownMenuItem onClick={() => signOut()}>
                     <LogOut className="mr-2 h-4 w-4" />
                     <span>Log out</span>
@@ -145,7 +150,7 @@ const ProjectNavBar = () => {
                         </div>
                       ))}
                   </DropdownMenuItem>
-                )}
+                )} */}
               </DropdownMenuContent>
             </DropdownMenu>
           </div>

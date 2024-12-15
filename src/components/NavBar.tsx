@@ -55,12 +55,12 @@ const NavBar = () => {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="navbar-link">
+                <Link href="/project/102" className="navbar-link">
                   Project
                 </Link>
               </li>
               <li>
-                <Link href="#" className="navbar-link">
+                <Link href="/quiz" className="navbar-link">
                   Quiz
                 </Link>
               </li>
@@ -68,7 +68,7 @@ const NavBar = () => {
           </div>
 
           <div className="md:flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse hidden gap-4">
-            {session?.user ? (
+            {/* {session?.user ? (
               <>
                 <button
                   className="p-[2px] relative"
@@ -98,7 +98,7 @@ const NavBar = () => {
                   <div className="sign-button-innerdiv">Sign-In</div>
                 </button>
               ))
-            )}
+            )} */}
 
             <DarkModeButton />
           </div>
@@ -126,14 +126,18 @@ const NavBar = () => {
 
                 </DropdownMenuItem>
                 </Link>
+              <Link href="/project/102">
                 <DropdownMenuItem>Projects</DropdownMenuItem>
+                </Link>
+                <Link href="/quiz">
                 <DropdownMenuItem>Quizzes</DropdownMenuItem>
+                </Link>
 
                 <DropdownMenuItem onClick={() => toggleTheme()}>
                   <DarkModeButton />
                 </DropdownMenuItem>
 
-                {session?.user ? (
+                {/* {session?.user ? (
                   <DropdownMenuItem onClick={() => signOut()}>
                     <LogOut className="mr-2 h-4 w-4" />
                     <span>Log out</span>
@@ -154,7 +158,7 @@ const NavBar = () => {
                         </div>
                       ))}
                   </DropdownMenuItem>
-                )}
+                )} */}
               </DropdownMenuContent>
             </DropdownMenu>
           </div>

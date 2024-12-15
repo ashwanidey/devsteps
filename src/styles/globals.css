@@ -74,7 +74,7 @@ html, body {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply dark:bg-gradient-to-r dark:from-gray-900 dark:to-black bg-background;
   }
   .top-margin {
     @apply absolute top-20;

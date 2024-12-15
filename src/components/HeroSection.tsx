@@ -80,7 +80,7 @@ export default function HeroSection() {
             <CarouselNext />
           </div>
         </Carousel>
-
+        <div className='max-w-lg flex items-center'>
         <Image
           src="/assets/bgimage.png"
           alt="logo"
@@ -88,6 +88,7 @@ export default function HeroSection() {
           height={500}
           className="md:-mt-20"
         />
+        </div>
       </div>
     </div>
   );

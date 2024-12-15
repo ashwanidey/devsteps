@@ -43,6 +43,7 @@ export default function IDE({params} : {params : any}) {
         };
         const response = await axios(options);
         setProject(response.data.project);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
